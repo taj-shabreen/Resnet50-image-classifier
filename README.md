@@ -4,7 +4,6 @@
   <img src="https://img.shields.io/badge/Powered%20By-PyTorch-red" alt="PyTorch Badge">
   <img src="https://img.shields.io/badge/Framework-Flask-blue" alt="Flask Badge">
   <img src="https://img.shields.io/badge/Model-ResNet50-yellow" alt="Model Badge">
-  <img src="https://img.shields.io/github/license/YOUR_USERNAME/resnet50-image-classifier" alt="License Badge">
 </p>
 
 <p align="center">
