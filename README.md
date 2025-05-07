@@ -108,8 +108,6 @@ Model	ResNet-50 (TorchVision)
 Frontend	HTML5, CSS3, Custom Animations
 Deployment	Localhost (Flask)
 
-## 📜 License
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ### 🙌 Acknowledgments
 🔗 PyTorch ResNet Models
