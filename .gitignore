@@ -1,0 +1,18 @@
+# Ignore Python bytecode
+__pycache__/
+*.pyc
+
+# Ignore model files
+*.h5
+
+# Ignore virtual environments
+venu/
+venv/
+env/
+
+# Ignore PyCharm project settings
+.idea/
+
+# Ignore OS/system files
+.DS_Store
+Thumbs.db
