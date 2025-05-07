@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ResNet-50 Image Classifier</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>🤖 ResNet-50 Image Classifier</h1>
+
+    <!-- Form to upload image -->
+    <form method="POST" action="/predict" enctype="multipart/form-data" class="upload-form" id="uploadForm">
+      <input type="file" name="file" id="fileInput" accept="image/*" required>
+      <button type="submit">Classify Image</button>
+    </form>
+
+    <!-- Image Preview -->
+    <div class="preview" id="previewBox">
+      {% if image_path %}
+        <img src="{{ url_for('static', filename='uploads/' + image_path) }}" class="uploaded-img" alt="Uploaded Image">
+      {% endif %}
+    </div>
+
+    <!-- Display Prediction -->
+    {% if prediction %}
+    <div class="result animate">
+      <p>🔍 Predicted Class: <strong>{{ prediction }}</strong></p>
+    </div>
+    {% endif %}
+  </div>
+
+  <script>
+    const fileInput = document.getElementById('fileInput');
+    const previewBox = document.getElementById('previewBox');
+
+    fileInput.onchange = function () {
+      const file = fileInput.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          previewBox.innerHTML = `<img src="${e.target.result}" class="uploaded-img" alt="Uploaded Image">`;
+        };
+        reader.readAsDataURL(file);
+      }
+    };
+  </script>
+</body>
+</html>
